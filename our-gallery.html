@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<title>Gallery | Clinica Medicare Homoeopathy &amp; Aesthetic Bhopal</title>
+  <meta name="description"
+    content="Explore photos of Clinica Medicare Homoeopathy & Aesthetic in Bhopal, including our clinic, doctors, staff, patient care, treatment environment and healthcare facilities.">
+
+  <meta name="keywords"
+    content="Clinica Medicare Bhopal photos, Clinica Medicare gallery, homeopathy clinic Bhopal photos, doctor photos Bhopal, clinic photos MP Nagar Bhopal">
+
+  <link rel="canonical" href="https://clinicamedicare.in/gallery.html">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+
+    /* ==============================
+       GALLERY PAGE
+    ============================== */
+
+    .gallery-intro {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .gallery-intro h2 {
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .gallery-intro p {
+      color: #666;
+      line-height: 1.8;
+    }
+
+    /* Gallery Filters */
+
+    .gallery-filters {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 35px;
+    }
+
+    .gallery-filter {
+      border: 1px solid #ddd;
+      background: #fff;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .gallery-filter:hover,
+    .gallery-filter.active {
+      background: var(--accent-color);
+      color: #fff;
+      border-color: var(--accent-color);
+    }
+
+    /* Gallery Grid */
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      margin-bottom: 24px;
+      background: #f7f7f7;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.06);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.75),
+        rgba(0, 0, 0, 0.05)
+      );
+
+      opacity: 0;
+      transition: all 0.35s ease;
+
+      display: flex;
+      align-items: flex-end;
+      padding: 22px;
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .gallery-overlay-content {
+      color: #fff;
+    }
+
+    .gallery-overlay-content h4 {
+      color: #fff;
+      font-size: 18px;
+      margin: 0 0 5px;
+      font-weight: 600;
+    }
+
+    .gallery-overlay-content span {
+      font-size: 13px;
+      opacity: 0.9;
+    }
+
+    .gallery-view {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+
+      width: 42px;
+      height: 42px;
+
+      border-radius: 50%;
+      background: rgba(255,255,255,0.95);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: var(--accent-color);
+      font-size: 18px;
+
+      transition: all 0.3s ease;
+    }
+
+    .gallery-view:hover {
+      background: var(--accent-color);
+      color: #fff;
+    }
+
+    /* Category Heading */
+
+    .gallery-category {
+      margin-bottom: 35px;
+    }
+
+    .gallery-category-title {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .gallery-category-title h3 {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .gallery-category-title p {
+      color: #777;
+      margin: 0;
+    }
+
+    /* CTA */
+
+    .gallery-cta {
+      margin-top: 50px;
+      padding: 45px 30px;
+      background: #f8f9fa;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .gallery-cta h3 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .gallery-cta p {
+      max-width: 700px;
+      margin: 0 auto 25px;
+      color: #666;
+    }
+
+    .gallery-cta .btn {
+      padding: 12px 28px;
+      border-radius: 30px;
+    }
+
+    @media (max-width: 768px) {
+
+      .gallery-item img {
+        height: 240px;
+      }
+
+      .gallery-category-title h3 {
+        font-size: 22px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body class="gallery-page">
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header id="header" class="header fixed-top">
+
+  <div class="topbar d-flex align-items-center dark-background">
+
+    <div class="container d-flex justify-content-center justify-content-md-between">
+
+      <div class="contact-info d-flex align-items-center">
+
+        <i class="bi bi-envelope d-flex align-items-center">
+          <a href="mailto:info@clinicamedicare.in">
+            info@clinicamedicare.in
+          </a>
+        </i>
+
+        <i class="bi bi-phone d-flex align-items-center ms-4">
+          <span>+91-704-927-1066</span>
+        </i>
+
+      </div>
+
+
+      <div class="social-links d-none d-md-flex align-items-center">
+
+        <a href="https://www.facebook.com/ClinicaMedicaBhopal/"
+           class="facebook"
+           target="_blank"
+           rel="noopener noreferrer">
+
+          <i class="bi bi-facebook"></i>
+
+        </a>
+
+        <a href="https://www.instagram.com/clinica_medicare_official/"
+           class="instagram"
+           target="_blank"
+           rel="noopener noreferrer">
+
+          <i class="bi bi-instagram"></i>
+
+        </a>
+
+        <a href="https://www.linkedin.com/company/108604701/admin/dashboard/"
+           class="linkedin"
+           target="_blank"
+           rel="noopener noreferrer">
+
+          <i class="bi bi-linkedin"></i>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="branding d-flex align-items-center">
+
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+
+        <img
+          src="assets/img/logo.png"
+          alt="Clinica Medicare Homoeopathy & Aesthetic Bhopal"
+          class="img-fluid">
+
+      </a>
+
+
+       <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+			 <li><a href="gallery.html">Before-After</a></li>
+    <!--    <li><a href="departments.html">Departments</a></li> -->
+            <li class="dropdown">
+    <a href="services.html">
+        <span>Our Speciality</span>
+        <i class="bi bi-chevron-down toggle-dropdown"></i>
+    </a>
+
+    <ul>
+
+        <!-- All Treatments -->
+        <li><a href="services.html">All Treatments</a></li>
+
+        <!-- Hair Restoration -->
+        <li class="dropdown">
+            <a href="services/advanced-hair-restoration-in-bhopal.html">
+                <span>Hair Restoration</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i>
+            </a>
+            <ul>
+    <li><a href="services/advanced-hair-restoration-in-bhopal.html">Hair Restoration</a></li>
+    <li><a href="services/hair-fall-treatment-bhopal.html">Hair Fall Treatment</a></li>
+    <li><a href="hair-growth-treatment-bhopal.html">Hair Growth Treatment</a></li>
+    <li><a href="hair-thinning-treatment-bhopal.html">Hair Thinning Treatment</a></li>
+    <li><a href="alopecia-treatment-bhopal.html">Alopecia Treatment</a></li>
+    <li><a href="dandruff-treatment-bhopal.html">Dandruff Treatment</a></li>
+    <li><a href="scalp-treatment-bhopal.html">Scalp Care Treatment</a></li>
+    <li><a href="male-pattern-baldness-treatment-bhopal.html">Male Pattern Baldness</a></li>
+    <li><a href="female-hair-loss-treatment-bhopal.html">Female Hair Loss</a></li>
+</ul>
+
+        <!-- Skin Care -->
+        <li class="dropdown">
+            <a href="services/homeopathic-skin-care-and-treatment-in-bhopal.html">
+                <span>Skin Care</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i>
+            </a>
+            <ul>
+                <li><a href="services/homeopathic-skin-care-and-treatment-in-bhopal.html">Skin Care</a></li>
+                <li><a href="acne-treatment-bhopal.html">Acne Treatment</a></li>
+                <li><a href="pigmentation-treatment-bhopal.html">Pigmentation Treatment</a></li>
+                <li><a href="psoriasis-treatment-bhopal.html">Psoriasis Treatment</a></li>
+                <li><a href="eczema-treatment-bhopal.html">Eczema Treatment</a></li>
+                <li><a href="vitiligo-treatment-bhopal.html">Vitiligo Treatment</a></li>
+                <li><a href="skin-allergy-treatment-bhopal.html">Skin Allergy Treatment</a></li>
+                <li><a href="anti-aging-treatment-bhopal.html">Anti-Aging Treatment</a></li>
+                <li><a href="skin-rejuvenation-bhopal.html">Skin Rejuvenation</a></li>
+            </ul>
+        </li>
+
+        <!-- Women's Health -->
+        <li class="dropdown">
+            <a href="services/womens-health-treatment-bhopal.html">
+                <span>Women's Health</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i>
+            </a>
+        
+<ul>
+    <li><a href="services/womens-health-treatment-bhopal.html">Women's Health</a></li>
+    <li><a href="services/pcos-treatment-bhopal.html">PCOS Treatment</a></li>
+    <li><a href="services/pcod-treatment-bhopal.html">PCOD Treatment</a></li>
+    <li><a href="services/menstrual-disorders-treatment-bhopal.html">Menstrual Disorders</a></li>
+    <li><a href="services/hormonal-imbalance-treatment-bhopal.html">Hormonal Imbalance</a></li>
+    <li><a href="services/female-infertility-treatment-bhopal.html">Female Infertility</a></li>
+    <li><a href="services/menopause-treatment-bhopal.html">Menopause Care</a></li>
+</ul>
+</li>
+        <!-- Men's Wellness -->
+        <li class="dropdown">
+            <a href="mens-wellness-bhopal.html">
+                <span>Men's Wellness</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i>
+            </a>
+            <ul>
+                <li><a href="mens-wellness-bhopal.html">Men's Wellness</a></li>
+                <li><a href="sexual-health-treatment-bhopal.html">Sexual Health</a></li>
+                <li><a href="erectile-dysfunction-treatment-bhopal.html">Erectile Dysfunction</a></li>
+                <li><a href="premature-ejaculation-treatment-bhopal.html">Premature Ejaculation</a></li>
+                <li><a href="low-libido-treatment-bhopal.html">Low Libido</a></li>
+            </ul>
+        </li>
+
+        <!-- Child Care -->
+        <li class="dropdown">
+            <a href="child-care-homeopathy-bhopal.html">
+                <span>Child Care</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i>
+            </a>
+            <ul>
+                <li><a href="child-care-homeopathy-bhopal.html">Child Care</a></li>
+                <li><a href="child-immunity-treatment-bhopal.html">Child Immunity</a></li>
+                <li><a href="child-cold-cough-treatment-bhopal.html">Cold &amp; Cough</a></li>
+                <li><a href="child-allergy-treatment-bhopal.html">Child Allergy</a></li>
+                <li><a href="child-digestive-treatment-bhopal.html">Digestive Problems</a></li>
+            </ul>
+        </li>
+
+        <!-- Chronic Diseases -->
+        <li class="dropdown">
+            <a href="chronic-disease-treatment-bhopal.html">
+                <span>Chronic Diseases</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i>
+            </a>
+            <ul>
+                <li><a href="chronic-disease-treatment-bhopal.html">Chronic Diseases</a></li>
+                <li><a href="thyroid-treatment-bhopal.html">Thyroid Treatment</a></li>
+                <li><a href="diabetes-homeopathy-bhopal.html">Diabetes</a></li>
+                <li><a href="arthritis-treatment-bhopal.html">Arthritis Treatment</a></li>
+                <li><a href="migraine-treatment-bhopal.html">Migraine Treatment</a></li>
+                <li><a href="asthma-treatment-bhopal.html">Asthma Treatment</a></li>
+                <li><a href="allergy-treatment-bhopal.html">Allergy Treatment</a></li>
+                <li><a href="digestive-disorders-treatment-bhopal.html">Digestive Disorders</a></li>
+                <li><a href="ibs-treatment-bhopal.html">IBS Treatment</a></li>
+                <li><a href="gastritis-treatment-bhopal.html">Gastritis Treatment</a></li>
+                <li><a href="constipation-treatment-bhopal.html">Constipation Treatment</a></li>
+            </ul>
+        </li>
+
+    </ul>
+</li>
+
+			  <li><a href="doctors.html">Doctors</a></li>
+   			  <li><a href="gallery.html" class="active">Photos & Gallery </a></li>
+ 			  <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main class="main">
+
+
+  <!-- PAGE TITLE -->
+
+<div class="page-title">
+
+    <!-- Hide empty heading and remove extra space -->
+    <div class="heading" style="display: none;"></div>
+
+    <nav class="breadcrumbs">
+
+        <div class="container">
+            <ol>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li class="current">
+                    Photos &amp; Gallery
+                </li>
+            </ol>
+        </div>
+
+    </nav>
+
+</div>
+
+
+
+
+  <!-- =====================================================
+       GALLERY SECTION
+  ====================================================== -->
+
+  <section class="section">
+
+    <div class="container" data-aos="fade-up">
+
+
+      <!-- INTRO -->
+
+      <div class="gallery-intro text-center mb-5">
+
+        <div class="service-category">
+          <span>Our Clinic • Our Team • Patient Care</span>
+        </div>
+
+        <h2>
+          Photos From Clinica Medicare
+        </h2>
+
+        <p>
+
+          Take a look inside Clinica Medicare and discover our clinic environment, healthcare team, consultation spaces and patient-care experience.
+
+        </p>
+
+      </div>
+
+
+
+      <!-- FILTER -->
+
+      <div class="gallery-filters">
+
+        <button class="gallery-filter active" data-filter="*">
+          All Photos
+        </button>
+
+        <button class="gallery-filter" data-filter=".clinic">
+          Clinic
+        </button>
+
+        <button class="gallery-filter" data-filter=".doctor">
+          Doctors
+        </button>
+
+        <button class="gallery-filter" data-filter=".staff">
+          Staff
+        </button>
+
+        <button class="gallery-filter" data-filter=".patients">
+          Patient Care
+        </button>
+
+        <button class="gallery-filter" data-filter=".treatment">
+          Treatments
+        </button>
+
+      </div>
+
+
+
+      <!-- =================================================
+           GALLERY GRID
+      ================================================== -->
+
+      <div class="row gy-4 gallery-container">
+
+
+        <!-- PHOTO 1 -->
+
+        <div class="col-lg-4 col-md-6 gallery-item-wrapper clinic"
+             data-category="clinic">
+
+          <div class="gallery-item">
+
+            <img
+              src="assets/clinic-reception-01.jpg"
+              alt="Clinica Medicare clinic reception in Bhopal"
+              loading="lazy">
+
+            <a
+              href="assets/clinic-reception-01.jpg"
+              class="glightbox gallery-view"
+              data-gallery="clinic-gallery"
+              title="Clinica Medicare Reception">
+
+              <i class="bi bi-zoom-in"></i>
+
+            </a>
+
+            <div class="gallery-overlay">
+
+              <div class="gallery-overlay-content">
+
+                <h4>
+                  Clinic Reception
+                </h4>
+
+                <span>
+                  Clinica Medicare, Bhopal
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- PHOTO 2 -->
+
+        <div class="col-lg-4 col-md-6 gallery-item-wrapper clinic"
+             data-category="clinic">
+
+          <div class="gallery-item">
+
+            <img
+              src="assets/clinic-consultation-room.jpg"
+              alt="Clinica Medicare consultation area Bhopal"
+              loading="lazy">
+
+            <a
+              href="assets/clinic-consultation-room.jpg"
+              class="glightbox gallery-view"
+              data-gallery="clinic-gallery"
+              title="Consultation Area">
+
+              <i class="bi bi-zoom-in"></i>
+
+            </a>
+
+            <div class="gallery-overlay">
+
+              <div class="gallery-overlay-content">
+
+                <h4>
+                  Consultation Area
+                </h4>
+
+                <span>
+                  Comfortable patient consultation environment
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- PHOTO 3 -->
+
+        <div class="col-lg-4 col-md-6 gallery-item-wrapper clinic"
+             data-category="clinic">
+
+          <div class="gallery-item">
+
+            <img
+              src="assets/clinic-corridor.jpg"
+              alt="Clinica Medicare clinic interior Bhopal"
+              loading="lazy">
+
+            <a
+              href="assets/clinic-corridor.jpg"
+              class="glightbox gallery-view"
+              data-gallery="clinic-gallery"
+              title="Clinica Medicare Clinic Interior">
+
+              <i class="bi bi-zoom-in"></i>
+
+            </a>
+
+            <div class="gallery-overlay">
+
+              <div class="gallery-overlay-content">
+
+                <h4>
+                  Clinic Interior
+                </h4>
+
+                <span>
+                  Welcoming healthcare environment
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- PHOTO 4 -->
+
+        <div class="col-lg-4 col-md-6 gallery-item-wrapper doctor"
+             data-category="doctor">
+
+          <div class="gallery-item">
+
+            <img
+              src="assets/doctor-cabin-01.jpg"
+              alt="Doctor cabin at Clinica Medicare in Bhopal"
+              loading="lazy">
+
+            <a
+              href="assets/doctor-cabin-01.jpg"
+              class="glightbox gallery-view"
+              data-gallery="doctor-gallery"
+              title="Clinica Medicare Doctor">
+
+              <i class="bi bi-zoom-in"></i>
+
+            </a>
+
+            <div class="gallery-overlay">
+
+              <div class="gallery-overlay-content">
+
+                <h4>
+                  Our Doctor
+                </h4>
+
+                <span>
+                  Experienced healthcare professional
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- PHOTO 5 -->
+
+        <div class="col-lg-4 col-md-6 gallery-item-wrapper doctor"
+             data-category="doctor">
+
+          <div class="gallery-item">
+
+              <img
+                src="assets/doctor-cabin-02.jpg"
+                alt="Doctor cabin at Clinica Medicare Bhopal"
+                loading="lazy">
+
+              <a
+                href="assets/doctor-cabin-02.jpg"
+                class="glightbox gallery-view"
+                data-gallery="doctor-gallery"
+                title="Doctor Consultation">
+
+                <i class="bi bi-zoom-in"></i>
+
+              </a>
+
+              <div class="gallery-overlay">
+
+                <div class="gallery-overlay-content">
+
+                  <h4>
+                    Doctor Consultation
+                  </h4>
+
+                  <span>
+                    Personalized patient consultation
+                  </span>
+
+                </div>
+
+              </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- PHOTO 6 -->
+
+        <div class="col-lg-4 col-md-6 gallery-item-wrapper staff"
+             data-category="staff">
+
+          <div class="gallery-item">
+
+            <img
+              src="assets/clinic-reception-02.jpg"
+              alt="Clinica Medicare reception area in Bhopal"
+              loading="lazy">
+
+            <a
+              href="assets/clinic-reception-02.jpg"
+              class="glightbox gallery-view"
+              data-gallery="staff-gallery"
+              title="Clinica Medicare Staff">
+
+              <i class="bi bi-zoom-in"></i>
+
+            </a>
+
+            <div class="gallery-overlay">
+
+              <div class="gallery-overlay-content">
+
+                <h4>
+                  Our Healthcare Team
+                </h4>
+
+                <span>
+                  Dedicated clinic staff
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- PHOTO 7 -->
+
+        <div class="col-lg-4 col-md-6 gallery-item-wrapper patients"
+             data-category="patients">
+
+          <div class="gallery-item">
+
+            <img
+              src="assets/clinic-pharmacy-01.jpg"
+              alt="Clinica Medicare homeopathy pharmacy in Bhopal"
+              loading="lazy">
+
+            <a
+              href="assets/clinic-pharmacy-01.jpg"
+              class="glightbox gallery-view"
+              data-gallery="patient-gallery"
+              title="Patient Care">
+
+              <i class="bi bi-zoom-in"></i>
+
+            </a>
+
+            <div class="gallery-overlay">
+
+              <div class="gallery-overlay-content">
+
+                <h4>
+                  Patient Care
+                </h4>
+
+                <span>
+                  Compassionate healthcare support
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- PHOTO 8 -->
+
+        <div class="col-lg-4 col-md-6 gallery-item-wrapper treatment"
+             data-category="treatment">
+
+          <div class="gallery-item">
+
+            <img
+              src="assets/clinic-pharmacy-02.jpg"
+              alt="Clinica Medicare pharmacy interior in Bhopal"
+              loading="lazy">
+
+            <a
+              href="assets/clinic-pharmacy-02.jpg"
+              class="glightbox gallery-view"
+              data-gallery="treatment-gallery"
+              title="Homeopathic Consultation">
+
+              <i class="bi bi-zoom-in"></i>
+
+            </a>
+
+            <div class="gallery-overlay">
+
+              <div class="gallery-overlay-content">
+
+                <h4>
+                  Treatment & Consultation
+                </h4>
+
+                <span>
+                  Personalized healthcare approach
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- PHOTO 9 -->
+
+        <div class="col-lg-4 col-md-6 gallery-item-wrapper treatment"
+             data-category="treatment">
+
+          <div class="gallery-item">
+
+            <img
+              src="assets/doctor-cabin-03.jpg"
+              alt="Additional doctor cabin at Clinica Medicare Bhopal"
+              loading="lazy">
+
+            <a
+              href="assets/doctor-cabin-03.jpg"
+              class="glightbox gallery-view"
+              data-gallery="treatment-gallery"
+              title="Patient Consultation">
+
+              <i class="bi bi-zoom-in"></i>
+
+            </a>
+
+            <div class="gallery-overlay">
+
+              <div class="gallery-overlay-content">
+
+                <h4>
+                  Patient Consultation
+                </h4>
+
+                <span>
+                  Individualized care and guidance
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+
+      <!-- =================================================
+           CTA
+      ================================================== -->
+
+      <div class="gallery-cta"
+           data-aos="fade-up"
+           data-aos-delay="200">
+
+        <h2>
+          Visit Clinica Medicare
+        </h2>
+
+        <p>
+
+          Looking for personalized homoeopathic and aesthetic healthcare in Bhopal? Schedule a consultation with our experienced healthcare team.
+
+        </p>
+
+        <a
+          href="https://wa.me/917049271066?text=Hello%20Clinica%20Medicare,%20I%20would%20like%20to%20book%20a%20consultation."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-primary">
+
+          <i class="bi bi-whatsapp me-2"></i>
+          Book Consultation
+
+        </a>
+
+        <a
+          href="contact.html"
+          class="btn btn-outline-primary ms-2">
+
+          Contact Us
+
+        </a>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer id="footer" class="footer-16 footer position-relative">
+
+  <div class="container">
+
+    <div class="footer-main"
+         data-aos="fade-up"
+         data-aos-delay="100">
+
+      <div class="row align-items-start">
+
+
+        <div class="col-lg-5">
+
+          <div class="brand-section">
+
+            <a href="index.html"
+               class="logo d-flex align-items-center mb-4">
+
+              <span class="sitename">
+                Clinica Medicare
+              </span>
+
+            </a>
+
+            <p class="brand-description">
+
+              Providing trusted hair, skin and homoeopathy treatments through advanced medical care and personalized solutions that enhance your health, confidence and natural beauty.
+
+            </p>
+
+
+            <div class="contact-info mt-5">
+
+              <div class="contact-item">
+
+                <i class="bi bi-geo-alt"></i>
+
+                <span>
+
+                  68 2nd, Bakshi Complex, above Trophy House,
+                  opp. Jyoti Cineplex, Zone II,
+                  Maharana Pratap Nagar,
+                  Bhopal, Madhya Pradesh 462011
+
+                </span>
+
+              </div>
+
+
+              <div class="contact-item">
+
+                <i class="bi bi-telephone"></i>
+
+                <span>
+                  +91-704-927-1066
+                </span>
+
+              </div>
+
+
+              <div class="contact-item">
+
+                <i class="bi bi-envelope"></i>
+
+                <span>
+                  info@clinicamedicare.in
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="col-lg-7">
+
+          <div class="footer-nav-wrapper">
+
+            <div class="row">
+
+
+              <div class="col-6 col-lg-3">
+
+                <div class="nav-column">
+
+                  <h6>
+                    Hair & Skin Treatments
+                  </h6>
+
+                  <nav class="footer-nav">
+
+                    <a href="services/advanced-hair-restoration-in-bhopal.html">
+  Hair Restoration
+</a>
+
+                    <a href="hair-fall-treatment-bhopal.html">
+                      Hair Fall Treatment
+                    </a>
+
+                  
+                    </a>
+
+                  </nav>
+
+                </div>
+
+              </div>
+
+
+
+              <div class="col-6 col-lg-3">
+
+                <div class="nav-column">
+
+                  <h6>
+                    Quick Links
+                  </h6>
+
+                  <nav class="footer-nav">
+
+                    <a href="about.html">
+                      About Us
+                    </a>
+
+                    <a href="doctors.html">
+                      Our Doctors
+                    </a>
+
+                    <a href="testimonials.html">
+                      Testimonials
+                    </a>
+
+                    <a href="gallery.html">
+                      Gallery
+                    </a>
+
+                    <a href="faq.html">
+                      FAQs
+                    </a>
+
+                    <a href="contact.html">
+                      Contact Us
+                    </a>
+
+                  </nav>
+
+                </div>
+
+              </div>
+
+
+
+              <div class="col-6 col-lg-3">
+
+                <div class="nav-column">
+
+                  <h6>
+                    Specialized Care
+                  </h6>
+
+                  <nav class="footer-nav">
+
+                    <a href="services/womens-health-treatment-bhopal.html">
+                      Women's Health
+                    </a>
+
+                    <a href="mens-wellness-bhopal.html">
+                      Men's Wellness
+                    </a>
+
+                    <a href="child-care-homeopathy-bhopal.html">
+                      Child Care
+                    </a>
+
+                    <a href="thyroid-treatment-bhopal.html">
+                      Thyroid Treatment
+                    </a>
+
+                    <a href="pcos-treatment-bhopal.html">
+                      PCOS/PCOD Care
+                    </a>
+
+                    <a href="chronic-disease-treatment-bhopal.html">
+                      Chronic Disease Treatment
+                    </a>
+
+                  </nav>
+
+                </div>
+
+              </div>
+
+
+
+              <div class="col-6 col-lg-3">
+
+                <div class="nav-column">
+
+                  <h6>
+                    Patient Resources
+                  </h6>
+
+                  <nav class="footer-nav">
+
+                    <a href="appointment.html">
+                      Book Appointment
+                    </a>
+
+                    <a href="privacy-policy.html">
+                      Privacy Policy
+                    </a>
+
+                    <a href="terms-of-service.html">
+                      Terms of Service
+                    </a>
+
+                    <a href="sitemap.xml">
+                      Sitemap
+                    </a>
+
+                    <a
+                      href="https://share.google/kbbGsOFDbZZj6sKBP"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="btn btn-warning">
+
+                      <i class="bi bi-star-fill"></i>
+                      Leave a Google Review
+
+                    </a>
+
+                    <a href="contact.html">
+                      Location &amp; Directions
+                    </a>
+
+                  </nav>
+
+                </div>
+
+              </div>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="footer-bottom">
+
+    <div class="container">
+
+      <div class="bottom-content"
+           data-aos="fade-up"
+           data-aos-delay="300">
+
+        <div class="row align-items-center">
+
+
+          <div class="col-lg-6">
+
+            <div class="copyright">
+
+              <p>
+
+                ©
+                <span class="sitename">
+                  Clinica Medicare
+                </span>.
+                All rights reserved.
+
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="col-lg-6">
+
+            <div class="legal-links">
+
+              <a href="privacy-policy.html">
+                Privacy Policy
+              </a>
+
+              <a href="terms-of-service.html">
+                Terms of Service
+              </a>
+
+              <a href="cookies-policy.html">
+                Cookie Policy
+              </a>
+
+              <div class="credits">
+
+                Designed & Developed by
+
+                <a href="https://isoftinfotech.in/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                  ISoft360 InfoTech
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+
+<!-- Scroll Top -->
+
+<a href="#!"
+   id="scroll-top"
+   class="scroll-top d-flex align-items-center justify-content-center">
+
+  <i class="bi bi-arrow-up-short"></i>
+
+</a>
+
+
+
+<!-- Preloader -->
+
+<div id="preloader"></div>
+
+
+
+<!-- Vendor JS -->
+
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="assets/vendor/php-email-form/validate.js"></script>
+
+<script src="assets/vendor/aos/aos.js"></script>
+
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+<script src="assets/js/main.js"></script>
+
+
+<!-- =========================================================
+     GALLERY FILTER
+========================================================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const filters = document.querySelectorAll(".gallery-filter");
+  const items = document.querySelectorAll(".gallery-item-wrapper");
+
+  filters.forEach(function (filter) {
+
+    filter.addEventListener("click", function () {
+
+      filters.forEach(function (button) {
+        button.classList.remove("active");
+      });
+
+      this.classList.add("active");
+
+      const category = this.getAttribute("data-filter");
+
+      items.forEach(function (item) {
+
+        if (category === "*" || item.classList.contains(category.substring(1))) {
+
+          item.style.display = "block";
+
+        } else {
+
+          item.style.display = "none";
+
+        }
+
+      });
+
+    });
+
+  });
+
+});
+
+</script>
+
+
+</body>
+
+</html>

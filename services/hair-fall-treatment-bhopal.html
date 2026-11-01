@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Hair & Skin Specialty Clinic</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Clinic
+  * Template URL: https://bootstrapmade.com/clinic-bootstrap-template/
+  * Updated: Jul 23 2025 with Bootstrap v5.3.7
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+<style>
+	.before-after-slider {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.before-after-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-after-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slider-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 3px;
+    height: 100%;
+    background: #fff;
+    cursor: ew-resize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-icon {
+    background: #fff;
+    border-radius: 50%;
+    padding: 8px 10px;
+    font-size: 14px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+.label {
+    position: absolute;
+    top: 15px;
+    padding: 6px 12px;
+    background: #f2c7a5;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.label.before {
+    left: 15px;
+}
+
+.label.after {
+    right: 15px;
+}
+	</style>
+	
+	</head>
+
+<body class="service-details-page">
+	
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const slider = document.querySelector('.before-after-slider');
+    const handle = document.getElementById('sliderLine');
+    const after = document.getElementById('afterWrapper');
+
+    let isDown = false;
+
+    // Mouse Events
+    handle.addEventListener('mousedown', () => isDown = true);
+    window.addEventListener('mouseup', () => isDown = false);
+
+    window.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+
+        let rect = slider.getBoundingClientRect();
+        let x = e.clientX - rect.left;
+
+        if (x < 0) x = 0;
+        if (x > rect.width) x = rect.width;
+
+        let percent = (x / rect.width) * 100;
+
+        after.style.width = percent + "%";
+        handle.style.left = percent + "%";
+    });
+
+    // Touch Events (Mobile)
+    slider.addEventListener('touchstart', () => isDown = true);
+    window.addEventListener('touchend', () => isDown = false);
+
+    window.addEventListener('touchmove', (e) => {
+        if (!isDown) return;
+
+        let rect = slider.getBoundingClientRect();
+        let x = e.touches[0].clientX - rect.left;
+
+        if (x < 0) x = 0;
+        if (x > rect.width) x = rect.width;
+
+        let percent = (x / rect.width) * 100;
+
+        after.style.width = percent + "%";
+        handle.style.left = percent + "%";
+    });
+
+});
+</script>
+  <header id="header" class="header fixed-top">
+
+    <div class="topbar d-flex align-items-center dark-background">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope d-flex align-items-center"><a
+              href="mailto:info@clinicamedicare.in">info@clinicamedicare.in</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+91-704-927-1066</span></i>
+        </div>
+        <div class="social-links d-none d-md-flex align-items-center">
+         <!-- <a href="#!" class="twitter"><i class="bi bi-twitter-x"></i></a> -->
+          <a href="https://www.facebook.com/ClinicaMedicaBhopal/" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/clinica_medicare_official/" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/108604701/admin/dashboard/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div><!-- End Top Bar -->
+
+    <div class="branding d-flex align-items-cente">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.webp" alt=""> -->
+          <img src="assets/img/logo.png" alt="Clinica Medicare" class="img-fluid">
+        </a>
+
+     <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+			 <li><a href="gallery.html">Before-After</a></li>
+    <!--    <li><a href="departments.html">Departments</a></li> -->
+             <li class="dropdown"><a href="services.html"><span>Our speciality</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="services.html" class="active">All Treatments</a></li>
+				<li><a href="hair&skinspecialty.html">Hair & Skin Specialty</a></li>
+                <li><a href="womenshealth.html">Women’s Health</a></li>
+                <li><a href="menshair.html">Men’s Hair, Wellness</a></li>
+                <li><a href="childcare.html">Child Care & Immunity</a></li>
+              </ul>
+            </li> 
+
+			  <li><a href="doctors.html">Doctors</a></li>
+ 			  <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title">
+      <div class="heading">
+        <div class="container">
+          <div class="row d-flex justify-content-center text-center">
+            <div class="col-lg-8">
+              <h1 class="heading-title">Service Details</h1>
+              <p class="mb-0">
+                Personalized Hair Restoration & Advanced Skin Treatments for Lasting Results
+
+At Clinica Medicare Homoeopathy & Aesthetic, we provide comprehensive, non-surgical treatments for hair and skin concerns using a combination of advanced homoeopathy and modern aesthetic care. Our experienced specialists identify the root cause of your condition and create personalized treatment plans that restore healthy hair, improve skin health, and enhance your confidence naturally.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Service Details</li>
+          </ol>
+        </div>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <!-- Service Details 2 Section -->
+    <section id="service-details-2" class="service-details-2 section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row">
+
+          <div class="col-lg-8 mx-auto text-center mb-5" data-aos="fade-up" data-aos-delay="150">
+            <div class="service-header">
+              <div class="service-category">
+                <span>Advanced Neurology</span>
+              </div>
+              <h2>Comprehensive Hair & Skin Care Services</h2>
+              <p class="lead">Personalized Hair Restoration & Advanced Skin Treatments for Lasting Results</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row gy-4 align-items-center">
+
+          <div class="col-lg-5" data-aos="fade-right" data-aos-delay="200">
+            <div class="service-details">
+
+              <div class="detail-item">
+                <div class="icon-wrapper">
+                  <i class="bi bi-activity"></i>
+                </div>
+                <div class="content">
+                  <h4>Hair Fall & Hair Regrowth Therapy</h4>
+                  <p>Hair loss can result from stress, hormonal imbalance, nutritional deficiencies, genetics, or lifestyle factors. Our personalized therapies help strengthen hair follicles, reduce excessive hair fall, and stimulate natural hair growth.</p>
+                </div>
+              </div>
+
+              <div class="detail-item">
+                <div class="icon-wrapper">
+                  <i class="bi bi-diagram-2"></i>
+                </div>
+                <div class="content">
+                  <h4>Dandruff & Scalp Disorders</h4>
+                  <p>We provide effective treatment for dandruff, itchy scalp, fungal infections, scalp irritation, and seborrheic dermatitis to restore a healthy scalp and promote stronger hair.</p>
+                </div>
+              </div>
+
+              <div class="detail-item">
+                <div class="icon-wrapper">
+                  <i class="bi bi-prescription2"></i>
+                </div>
+                <div class="content">
+                  <h4>Skin Rejuvenation & Acne Care</h4>
+                  <p>Our customized skin treatments help manage acne, acne scars, pigmentation, dull skin, and uneven skin tone while improving overall skin texture and radiance.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-lg-7" data-aos="fade-left" data-aos-delay="300">
+          <div class="before-after-slider">
+
+    <img src="assets/img/health/neurology-2.webp" class="img-before">
+
+    <div class="img-after-wrapper" id="afterWrapper">
+        <img src="assets/img/health/neurology-2.webp">
+    </div>
+
+    <div class="slider-line" id="sliderLine">
+        <span class="slider-icon">⇆</span>
+    </div>
+
+    <div class="label before">Before</div>
+    <div class="label after">After</div>
+
+</div>
+			  
+          </div>
+
+        </div>
+
+        <div class="row gy-4 mt-5">
+
+          <div class="col-12" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-overview">
+              <div class="row align-items-center">
+
+                <div class="col-lg-6">
+                  <h3>Why Choose Our Hair & Skin Specialty?</h3>
+                  <p>We believe healthy hair and glowing skin begin with understanding the root cause of every condition. Our patient-first approach combines personalized care with safe and natural treatment methods for long-lasting results.</p>
+
+                  <div class="features-grid">
+                    <div class="feature">
+                      <i class="bi bi-award"></i>
+                      <span>Experienced Hair & Skin Specialists</span>
+                    </div>
+                    <div class="feature">
+                      <i class="bi bi-clock-history"></i>
+                      <span>Personalized Treatment Plans</span>
+                    </div>
+                    <div class="feature">
+                      <i class="bi bi-shield-plus"></i>
+                      <span>Safe & Non-Surgical Treatments</span>
+                    </div>
+                    <div class="feature">
+                      <i class="bi bi-heart-pulse"></i>
+                      <span>Advanced Homoeopathy with Modern Aesthetic Care</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-6">
+                  <div class="treatment-areas">
+                    <h4>Conditions We Treat</h4>
+                    <div class="condition-tags">
+                      <span class="tag">Hair Fall & Hair Thinning</span>
+                      <span class="tag">Male & Female Pattern Baldness</span>
+                      <span class="tag">Alopecia (Hair Loss)</span>
+                      <span class="tag">Acne & Pimples</span>
+                      <span class="tag">Skin Allergys</span>
+                      <span class="tag">Pigmentation & Melasma</span>
+                      <span class="tag">Dry & Oily Skin</span>
+                      <span class="tag">Dark Spots</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row gy-4 mt-5">
+
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="action-card primary">
+              <div class="card-header">
+                <i class="bi bi-calendar-check"></i>
+                <h4>Schedule Consultation</h4>
+              </div>
+              <p>Book a personalized consultation with our experienced Hair & Skin specialists and receive a treatment plan designed specifically for your condition.</p>
+              <div class="card-footer">
+                <a href="https://wa.me/917049271066" class="btn-action">Book Now</a>
+                <span class="availability">Next available: Tomorrow</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="action-card secondary">
+              <div class="card-header">
+                <i class="bi bi-telephone"></i>
+                <h4>Emergency Consultation</h4>
+              </div>
+              <p>24/7 neurological emergency support and rapid response</p>
+              <div class="card-footer">
+                <a href="tel:+91704-927-1066" class="btn-action">Call Now</a>
+                <span class="availability">+91-704-927-1066</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="action-card tertiary">
+              <div class="card-header">
+                <i class="bi bi-file-text"></i>
+                <h4>Get Second Opinion</h4>
+              </div>
+              <p>Expert review of existing diagnoses and treatment plans</p>
+              <div class="card-footer">
+                <a href="https://wa.me/917049271066" class="btn-action">Request Review</a>
+                <span class="availability">Response within 48h</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Service Details 2 Section -->
+
+  </main>
+
+  <footer id="footer" class="footer-16 footer position-relative">
+
+    <div class="container">
+
+      <div class="footer-main" data-aos="fade-up" data-aos-delay="100">
+        <div class="row align-items-start">
+
+          <div class="col-lg-5">
+            <div class="brand-section">
+              <a href="index.html" class="logo d-flex align-items-center mb-4">
+                <span class="sitename">Clinica Medicare</span>
+              </a>
+              <p class="brand-description">Providing trusted hair, skin, 
+			  and homoeopathy treatments through advanced medical care and personalized solutions that enhance your health, confidence, and natural beauty.</p>
+
+              <div class="contact-info mt-5">
+                <div class="contact-item">
+                  <i class="bi bi-geo-alt"></i>
+                  <span>68 2nd, Bakshi Complex, above Trophy house, opp. Jyoti cineplex, Zone ll, Maharana Pratap Nagar, Bhopal, Madhya Pradesh 462011</span>
+                </div>
+                <div class="contact-item">
+                  <i class="bi bi-telephone"></i>
+                  <span>+91-704-927-1066</span>
+                </div>
+                <div class="contact-item">
+                  <i class="bi bi-envelope"></i>
+                  <span>Info@clinicamedicare.in</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="footer-nav-wrapper">
+              <div class="row">
+
+                <div class="col-6 col-lg-3">
+                  <div class="nav-column">
+                    <h6>Studio</h6>
+                    <nav class="footer-nav">
+                      <a href="#!">Our Story</a>
+                      <a href="#!">Design Process</a>
+                      <a href="#!">Portfolio</a>
+                      <a href="#!">Case Studies</a>
+                      <a href="#!">Awards</a>
+                    </nav>
+                  </div>
+                </div>
+
+                <div class="col-6 col-lg-3">
+                  <div class="nav-column">
+                    <h6>Services</h6>
+                    <nav class="footer-nav">
+                      <a href="#!">Brand Identity</a>
+                      <a href="#!">Web Design</a>
+                      <a href="#!">Mobile Apps</a>
+                      <a href="#!">Digital Strategy</a>
+                      <a href="#!">Consultation</a>
+                    </nav>
+                  </div>
+                </div>
+
+                <div class="col-6 col-lg-3">
+                  <div class="nav-column">
+                    <h6>Resources</h6>
+                    <nav class="footer-nav">
+                      <a href="#!">Design Blog</a>
+                      <a href="#!">Style Guide</a>
+                      <a href="#!">Free Assets</a>
+                      <a href="#!">Tutorials</a>
+                      <a href="#!">Inspiration</a>
+                    </nav>
+                  </div>
+                </div>
+
+                <div class="col-6 col-lg-3">
+                  <div class="nav-column">
+                    <h6>Connect</h6>
+                    <nav class="footer-nav">
+                      <a href="#!">Start Project</a>
+                      <a href="#!">Schedule Call</a>
+                      <a href="#!">Join Newsletter</a>
+                      <a href="#!">Follow Updates</a>
+                      <a href="#!">Partnership</a>
+                    </nav>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="bottom-content" data-aos="fade-up" data-aos-delay="300">
+          <div class="row align-items-center">
+
+            <div class="col-lg-6">
+              <div class="copyright">
+                <p>© <span class="sitename">Clinica Medicare</span>. All rights reserved.</p>
+              </div>
+            </div>
+ 			<div class="col-lg-6">
+              <div class="legal-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+                <a href="cookies-policy.html">Cookie Policy</a>
+                <div class="credits">
+                  <!-- All the links in the footer should remain intact. -->
+                  <!-- You can delete the links only if you've purchased the pro version. -->
+                  <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                  <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+                  Designed & Developed by <a href="https://isoftinfotech.in/">ISoft360 InfoTech</a>.
+                </div>
+              </div>
+            </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#!" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
